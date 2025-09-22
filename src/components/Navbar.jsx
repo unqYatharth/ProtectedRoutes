@@ -14,7 +14,7 @@ const Navbar = () => {
         user ?
           <div className='flex gap-3'>
             <p>Hey, {user.username}</p>
-            <button onClick={logout} className='bg-red-500 rounded text-white px-3 py-1'>Logout</button>
+            <button onClick={logout} className='bg-red-500 rounded text-white px-3 py-1 hover:bg-red-600 cursor-pointer'>Logout</button>
           </div> :
           <div className='flex gap-3'>
             <Link to='/signup'>Singup</Link>
