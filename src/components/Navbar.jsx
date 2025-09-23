@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext'
 const Navbar = () => {
   const { user, logout } = useAuth();
   return (
-    <nav className='w-full p-5 flex justify-between items-center bg-gray-400'>
+    <nav className='w-full p-5 flex justify-between bg-gray-400'>
       <div className='flex gap-3'>
         <Link to='/'>Home</Link>
         <Link to='/dashboard'>Dashboard</Link>

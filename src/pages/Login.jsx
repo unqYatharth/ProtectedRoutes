@@ -17,15 +17,11 @@ const Login = () => {
 
     const success = login(data);
 
-    console.log("Login success", success)
-
     if (!success) {
       setError('Inavalid Credentials')
     } else {
       navigate('/dashboard');
     }
-
-
 
   }
 

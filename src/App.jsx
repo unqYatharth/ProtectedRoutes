@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Dashboard from "./pages/Dashboard"
+import ReverseProtectedRoute from "./components/ReverseProtectedRoute"
 
 function App() {
 
@@ -14,8 +15,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={
+            <ReverseProtectedRoute>
+              <Signup />
+            </ReverseProtectedRoute>
+          } />
+          <Route path='/login' element={
+            <ReverseProtectedRoute>
+              <Login />
+            </ReverseProtectedRoute>
+          } />
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <Dashboard />
